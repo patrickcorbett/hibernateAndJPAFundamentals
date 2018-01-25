@@ -30,6 +30,10 @@
 		<!-- @ManyToOne -->
 		<mapping class="hibernate.annotationMapping.domain.L00024Guide" />
 		<mapping class="hibernate.annotationMapping.domain.L00024Student" />
+		
+		<!-- @ManyToOne - CascadeType PERSIST & REMOVE -->
+		<mapping class="hibernate.annotationMapping.domain.L00025Guide" />
+		<mapping class="hibernate.annotationMapping.domain.L00025Student" />
 
 	</session-factory>
 </hibernate-configuration>
