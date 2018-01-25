@@ -18,6 +18,10 @@
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
 
+		<!-- Create/update tables automatically using mapping metadata -->
+		<!-- "create-drop" works like "drop-create" in mysql -->
+		<property name="hbm2ddl.auto">create-drop</property>
+
 		<!-- Use XML-based mapping metadata -->
 		<mapping resource="hibernate/xmlMapping/domain/Message.hbm.xml" />
 

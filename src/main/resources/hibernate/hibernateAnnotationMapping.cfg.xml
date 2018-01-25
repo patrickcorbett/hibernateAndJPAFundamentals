@@ -18,9 +18,15 @@
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
 
+		<!-- Create/update tables automatically using mapping metadata -->
+		<!-- "create-drop" works like "drop-create" in mysql -->
+		<!-- "create" works like "drop-create" in mysql -->
+		<property name="hbm2ddl.auto">create-drop</property>
+
 		<!-- Use Annotation-based mapping metadata -->
 		<mapping class="hibernate.annotationMapping.domain.Message" />
-
+		<mapping class="hibernate.annotationMapping.domain.Person" />
+		
 	</session-factory>
 </hibernate-configuration>
 
