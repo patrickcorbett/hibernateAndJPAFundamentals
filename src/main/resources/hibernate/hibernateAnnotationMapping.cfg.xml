@@ -35,6 +35,10 @@
 		<mapping class="hibernate.annotationMapping.domain.L00025Guide" />
 		<mapping class="hibernate.annotationMapping.domain.L00025Student" />
 
+		<!-- @ManyToOne - Bidirectional Relationships -->
+		<mapping class="hibernate.annotationMapping.domain.L00027Guide" />
+		<mapping class="hibernate.annotationMapping.domain.L00027Student" />
+
 	</session-factory>
 </hibernate-configuration>
 
