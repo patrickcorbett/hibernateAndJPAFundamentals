@@ -225,5 +225,32 @@ public class L00027_BiDirectionalManyToOne {
 		}
 
 	}
+	
+	@Test
+	public void getStudents() {
+
+		Session session = HibernateUtil.getSessionFactoryAnnotationMapping().openSession();
+		Transaction txn = session.getTransaction();
+		try {
+			// Get a guide and find all students 
+			L00027Guide guide1 = (L00027Guide) session.get(L00027Guide.class, 1L);
+
+			assertEquals("Guide 1 should be the guide for student 1", 2, guide1.getStudents().size());
+
+		} catch (HibernateException e) {
+			fail("Hibernate Exception : " + e.getMessage());
+		} catch (Exception e) {
+			if (txn != null) {
+				txn.rollback();
+			}
+			e.printStackTrace();
+		} finally {
+			if (session != null) {
+				session.close();
+			}
+		}
+
+	}
+
 
 }
